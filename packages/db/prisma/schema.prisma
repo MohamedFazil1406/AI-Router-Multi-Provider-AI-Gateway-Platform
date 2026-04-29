@@ -1,0 +1,95 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  
+  provider = "postgresql"
+}
+
+
+model User { 
+  id        Int       @id @default(autoincrement()) 
+  email     String    @unique 
+  password  String 
+  credits   Int     @default(0) 
+  apiKeys   ApiKey[] 
+  transactions OnrampTransaction[] 
+  conversations Conversation[] 
+  } 
+  
+model ApiKey { 
+    id        Int     @id @default(autoincrement()) 
+    userId    Int 
+    name      String 
+    apiKey    String  @unique 
+    disabled  Boolean @default(false) 
+    deleted   Boolean @default(false) 
+    lastUsed DateTime?
+    creditConsumed Int     @default(0)
+    user      User    @relation(fields: [userId], references: [id]) 
+    conversations Conversation[] 
+    } 
+    
+model OnrampTransaction { 
+      id      Int     @id @default(autoincrement()) 
+      userId  Int 
+      amount  Int 
+      status  String 
+      user    User    @relation(fields: [userId], references: [id]) 
+      }
+
+model Company { 
+        id       Int     @id @default(autoincrement()) 
+        name     String 
+        website  String 
+        models   Model[] 
+        }
+
+model Model { 
+          id         Int      @id @default(autoincrement()) 
+          name       String 
+          slug       String   
+          companyId  Int 
+          company    Company  @relation(fields: [companyId], references: [id]) 
+          providers  ModelProviderMapping[] 
+ }
+          
+model Provider { 
+            id       Int     @id @default(autoincrement()) 
+            name     String 
+            
+            website  String 
+            mappings ModelProviderMapping[] 
+            } 
+            
+model ModelProviderMapping { 
+              id               Int     @id @default(autoincrement()) 
+              modelId          Int 
+              providerId       Int 
+              inputTokenCost   Int 
+              outputTokenCost  Int 
+              model    Model    @relation(fields: [modelId], references: [id]) 
+              provider Provider @relation(fields: [providerId], references: [id]) 
+              conversations Conversation[] 
+              } 
+            
+model Conversation { 
+              id                       Int    @id @default(autoincrement()) 
+              userId                   Int 
+              apiKeyId                 Int 
+              modelProviderMappingId   Int 
+              input                    String 
+              output                   String 
+              inputTokenCount          Int 
+              outputTokenCount         Int 
+              user        User        @relation(fields: [userId], references: [id]) 
+              apiKey      ApiKey      @relation(fields: [apiKeyId], references: [id]) 
+              mapping     ModelProviderMapping @relation(fields: [modelProviderMappingId], references: [id]) 
+              } 
