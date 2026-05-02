@@ -12,7 +12,7 @@ import type { App } from "app";
 import "./index.css";
 import { ModelPage } from "./pages/Model";
 
-const BASE_URL = import.meta.env?.VITE_API_2 ?? "http://localhost:3000";
+const BASE_URL = import.meta.env?.VITE_API_1 ?? "http://localhost:3000";
 
 const client = treaty<App>(BASE_URL, {
   fetch: {
