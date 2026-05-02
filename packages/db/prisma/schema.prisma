@@ -55,6 +55,7 @@ model Company {
 model Model { 
           id         Int      @id @default(autoincrement()) 
           name       String 
+          description String?
           slug       String   
           companyId  Int 
           company    Company  @relation(fields: [companyId], references: [id]) 

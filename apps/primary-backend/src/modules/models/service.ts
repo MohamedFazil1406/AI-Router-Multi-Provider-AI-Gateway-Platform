@@ -1,3 +1,4 @@
+import { describe } from "bun:test";
 import { prisma } from "db";
 
 export abstract class ModelsService {
@@ -12,6 +13,7 @@ export abstract class ModelsService {
       id: model.id.toString(),
       name: model.name,
       slug: model.slug,
+      description: model.description,
       company: {
         id: model.company.id.toString(),
         name: model.company.name,

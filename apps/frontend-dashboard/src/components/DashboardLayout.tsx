@@ -1,11 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { LayoutDashboard, Key, Coins, Zap, LogOut } from "lucide-react";
+import { Label } from "@radix-ui/react-label";
 
 const navItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "API Keys", href: "/api-keys", icon: Key },
   { label: "Credits", href: "/credits", icon: Coins },
+  { label: "Models", href: "/models", icon: Zap },
 ];
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {

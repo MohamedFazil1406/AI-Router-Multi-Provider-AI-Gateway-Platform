@@ -7,6 +7,7 @@ export const ModelsModel = {
         id: t.String(),
         name: t.String(),
         slug: t.String(),
+        description: t.Union([t.String(), t.Null()]),
         company: t.Object({
           id: t.String(),
           name: t.String(),

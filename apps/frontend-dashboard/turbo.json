@@ -1,0 +1,7 @@
+{
+  "pipeline": {
+    "build": {
+      "env": ["VITE_API_1", "VITE_API_2"]
+    }
+  }
+}

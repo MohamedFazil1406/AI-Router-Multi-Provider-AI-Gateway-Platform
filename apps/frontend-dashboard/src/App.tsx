@@ -10,6 +10,7 @@ import { treaty } from "@elysia/eden";
 import { ElysiaClientContextProvider } from "./provider/Eden";
 import type { App } from "app";
 import "./index.css";
+import { ModelPage } from "./pages/Model";
 
 const client = treaty<App>(`http://localhost:3000`, {
   fetch: {
@@ -31,6 +32,7 @@ export function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/api-keys" element={<ApiKeys />} />
             <Route path="/credits" element={<Credits />} />
+            <Route path="/models" element={<ModelPage />} />
           </Routes>
         </BrowserRouter>
       </ElysiaClientContextProvider>
