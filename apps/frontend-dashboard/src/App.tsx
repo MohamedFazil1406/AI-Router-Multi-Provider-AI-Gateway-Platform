@@ -12,11 +12,14 @@ import type { App } from "app";
 import "./index.css";
 import { ModelPage } from "./pages/Model";
 
-const client = treaty<App>(`http://localhost:3000`, {
-  fetch: {
-    credentials: "include",
+const client = treaty<App>(
+  import.meta.env.VITE_API_1 || `http://localhost:3000`,
+  {
+    fetch: {
+      credentials: "include",
+    },
   },
-});
+);
 
 const queryClient = new QueryClient();
 

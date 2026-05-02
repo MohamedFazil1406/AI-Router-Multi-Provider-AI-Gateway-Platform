@@ -2,7 +2,7 @@ import { treaty } from "@elysia/eden";
 import { type App } from "app";
 import { createContext, useContext } from "react";
 
-const client = treaty<App>(`localhost:3000`, {
+const client = treaty<App>(import.meta.env.VITE_API_1 || `localhost:3000`, {
   fetch: {
     credentials: "include",
   },
