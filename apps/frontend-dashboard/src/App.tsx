@@ -20,6 +20,8 @@ const client = treaty<App>(BASE_URL, {
   },
 });
 
+console.log("API:", import.meta.env?.VITE_API_1);
+
 const queryClient = new QueryClient();
 
 export function App() {
