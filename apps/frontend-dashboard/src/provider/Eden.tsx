@@ -2,7 +2,7 @@ import { treaty } from "@elysia/eden";
 import { type App } from "app";
 import { createContext, useContext } from "react";
 
-const BASE_URL = process.env.VITE_API_1 ?? "http://localhost:3000";
+const BASE_URL = process.env.VITE_API_1! ?? "http://localhost:3000";
 
 const client = treaty<App>(BASE_URL, {
   fetch: {
