@@ -4,9 +4,9 @@ import { app } from "./app";
 app
   .use(
     cors({
-      origin: ["https://open-router-frontend-dashboard.vercel.app"],
+      origin: "https://open-router-frontend-dashboard.vercel.app",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
+      allowedHeaders: "*",
       credentials: true,
     }),
   )
