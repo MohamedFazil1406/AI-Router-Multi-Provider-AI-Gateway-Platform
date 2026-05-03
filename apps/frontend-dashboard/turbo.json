@@ -2,7 +2,13 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "env": ["VITE_API_1", "VITE_API_2"]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "env": ["VITE_API_1"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
     }
   }
 }
