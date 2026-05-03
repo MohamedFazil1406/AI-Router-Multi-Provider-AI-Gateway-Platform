@@ -9,6 +9,7 @@ app
           ? "https://open-router-frontend-dashboard.vercel.app/"
           : true,
       credentials: true,
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     }),
   )
   .listen(3000);
