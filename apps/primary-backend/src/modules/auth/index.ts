@@ -46,6 +46,9 @@ export const auth = new Elysia({ prefix: "/auth" })
           auth.set({
             value: token,
             httpOnly: true,
+            secure: true,
+            sameSite: "none",
+            path: "/",
             maxAge: 60 * 60 * 24 * 7, // 7 days
           });
 
