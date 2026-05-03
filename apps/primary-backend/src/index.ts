@@ -6,7 +6,7 @@ app
     cors({
       origin: "https://open-router-frontend-dashboard.vercel.app",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: "*",
+      allowedHeaders: ["Content-Type", "Authorization"],
       credentials: true,
     }),
   )
