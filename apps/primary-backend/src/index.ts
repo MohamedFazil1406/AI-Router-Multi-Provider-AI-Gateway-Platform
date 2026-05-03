@@ -4,12 +4,10 @@ import { app } from "./app";
 app
   .use(
     cors({
-      origin:
-        process.env.NODE_ENV === "production"
-          ? "https://open-router-frontend-dashboard.vercel.app/"
-          : true,
-      credentials: true,
+      origin: ["https://open-router-frontend-dashboard.vercel.app"],
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true,
     }),
   )
   .listen(3000);
