@@ -75,7 +75,7 @@ export function Landing() {
               <Zap className="size-3.5 text-primary" />
             </div>
             <span className="text-sm font-semibold tracking-tight">
-              OpenRouter
+              AI Router
             </span>
           </div>
           <div className="flex items-center gap-3">
@@ -298,10 +298,10 @@ export function Landing() {
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Zap className="size-3.5 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">OpenRouter</span>
+            <span className="text-xs text-muted-foreground">AI Router</span>
           </div>
           <p className="text-xs text-muted-foreground">
-            &copy; 2026 OpenRouter. All rights reserved.
+            &copy; 2026 AI Router. All rights reserved.
           </p>
         </div>
       </footer>

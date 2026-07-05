@@ -23,7 +23,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             <Zap className="size-3.5 text-primary" />
           </div>
           <span className="text-sm font-semibold tracking-tight text-foreground">
-            OpenRouter
+            AI Router
           </span>
         </div>
 

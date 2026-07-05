@@ -53,7 +53,7 @@ export function Dashboard() {
             Dashboard
           </h1>
           <p className="text-muted-foreground text-sm mt-1">
-            Overview of your OpenRouter account.
+            Overview of your AI Router account.
           </p>
         </div>
 

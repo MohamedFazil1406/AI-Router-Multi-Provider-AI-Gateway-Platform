@@ -98,7 +98,7 @@ export function Signup() {
             <Zap className="size-4 text-primary" />
           </div>
           <span className="text-lg font-semibold tracking-tight text-foreground">
-            OpenRouter
+            AI Router
           </span>
         </div>
 

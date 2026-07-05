@@ -98,7 +98,7 @@ export function Signin() {
             <Zap className="size-4 text-primary" />
           </div>
           <span className="text-lg font-semibold tracking-tight text-foreground">
-            OpenRouter
+            AI Router
           </span>
         </div>
 
@@ -108,7 +108,7 @@ export function Signin() {
               Welcome back
             </CardTitle>
             <CardDescription className="text-muted-foreground/80">
-              Sign in to your OpenRouter account
+              Sign in to your AI Router account
             </CardDescription>
           </CardHeader>
 

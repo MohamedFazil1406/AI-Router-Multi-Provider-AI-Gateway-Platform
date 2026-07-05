@@ -1,12 +1,13 @@
 # AI Router– Multi-Provider AI Gateway Platform
 
-OpenRouter is a full-stack AI model routing platform built with a **Turborepo monorepo architecture**. It allows users to authenticate, manage API keys, access AI models, generate content, and handle payments through a scalable multi-service system.
+AI Router is a full-stack AI model routing platform built with a **Turborepo monorepo architecture**. It allows users to authenticate, manage API keys, access AI models, generate content, and handle payments through a scalable multi-service system.
 
 ## 🚀 Project Architecture
 
 This project is structured using **Turborepo** and contains three main applications:
 
 ### 1. Primary Backend
+
 Responsible for core platform features such as:
 
 - User Authentication (Sign In / Sign Up)
@@ -16,6 +17,7 @@ Responsible for core platform features such as:
 - Database Operations
 
 ### 2. API Backend
+
 Handles communication with AI models and content generation.
 
 Built using:
@@ -30,7 +32,8 @@ Main Responsibilities:
 - Process user requests
 
 ### 3. Frontend Dashboard
-User interface of OpenRouter platform.
+
+User interface of AI Router platform.
 
 Built using:
 
@@ -52,27 +55,32 @@ Main Features:
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React
 - Tailwind CSS
 - TypeScript
 - Eden Client
 
 ### Backend
+
 - Elysia.js
 - Node.js / Bun Runtime
 
 ### Database
+
 - Neon DB (Serverless PostgreSQL)
 
 ### ORM
+
 - Prisma ORM
 
 ### Monorepo Tooling
+
 - Turborepo
 
 ---
 
-### create .env file 
+### create .env file
 
 DATABASE_URL=your_neon_database_url
 JWT_SECRET_KEY=your_jwt_secret_key
