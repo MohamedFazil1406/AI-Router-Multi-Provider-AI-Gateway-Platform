@@ -1,4 +1,4 @@
-# OpenRouter
+# AI Router– Multi-Provider AI Gateway Platform
 
 OpenRouter is a full-stack AI model routing platform built with a **Turborepo monorepo architecture**. It allows users to authenticate, manage API keys, access AI models, generate content, and handle payments through a scalable multi-service system.
 
